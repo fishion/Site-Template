@@ -1,0 +1,18 @@
+{
+  "paths" : {
+    "controllerPath"  : "src/controller",
+    "pagesPath"       : "src/view/page",
+    "wrappersPath"    : "src/view/component/wrapper",
+    "includesPath"    : "src/view/component/include"
+  },
+  "site" : {
+    "title"       : "Site Template",
+    "description" : "A template structure for generating static sites",
+    "url"         : "www.maytreehousestudios.co.uk/",
+    "author"      : "Maytree House Studios",
+    "themeColour" : "rgb(33,82,179)",
+    "twitterHandle" : "",
+    "og-description" : "",
+    "og-type" : ""
+  }
+}

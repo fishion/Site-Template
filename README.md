@@ -6,6 +6,7 @@ A starting point for a website project
 
 * Clone project into new directory
 * In package.json : Edit Name / description
+* Edit config.json with site details
 * Change server port, if you want
 * npm i
 
@@ -33,3 +34,4 @@ A starting point for a website project
 * npm audit fix
 * add a script to do all the above instructions for you
 * Add stub tests (and eslint config)
+* controllers
