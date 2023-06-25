@@ -1,0 +1,28 @@
+{
+  "name": "projectName",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --ext .js",
+    "lintfix": "eslint src --ext .js --fix",
+    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' -- npm run build",
+    "build": "webpack; sass src/sass:dist/css",
+    "serve": "serve -p 4100 -c ../.serve.json dist"
+  },
+  "author": "alex@monney.me",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "eslint": "^8.34.0",
+    "eslint-config-standard": "^17.0.0",
+    "handlebarsextended": "github:fishion/HandlebarsExtended",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "onchange": "^7.1.0",
+    "sass": "^1.55.0",
+    "serve": "^14.0.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
