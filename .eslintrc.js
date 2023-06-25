@@ -10,6 +10,7 @@ module.exports = {
     ecmaVersion : 'latest',
     sourceType : 'module'
   },
+  ignorePatterns : ['dist/**'],
   rules : {
     'no-multi-spaces' : 'off',
     'one-var' : ['error', 'consecutive'],

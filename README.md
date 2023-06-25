@@ -35,3 +35,4 @@ A starting point for a website project
 * add a script to do all the above instructions for you
 * Add stub tests (and eslint config)
 * controllers
+* Basic CI for publishing to cloudflare pages
