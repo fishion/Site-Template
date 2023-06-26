@@ -1,5 +1,7 @@
 {{#wrap "html"}}
   <p>Site Template</p>
   <p>Site title : {{{site.title}}}</p>
+  <p>Page name : {{pagename.name}}</p>
+  <p>Page is index : {{#if pagename.is.index}}true{{/if}}</p>
   <p>Controller variable : {{{controllerVar}}}</p>
 {{/wrap}}

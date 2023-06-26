@@ -32,6 +32,4 @@ A starting point for a website project
 # TODO
 
 * add a script to do all the above instructions for you
-* Add stub tests (and eslint config)
 * Basic CI for publishing to cloudflare pages
-* controllers
