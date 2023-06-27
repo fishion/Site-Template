@@ -2,7 +2,7 @@
 
 A starting point for a website project
 
-# Instructions
+## Instructions
 
 * Clone project into new directory
 * In package.json : Edit Name / description
@@ -10,9 +10,10 @@ A starting point for a website project
 * Change server port, if you want
 * npm i
 
-# Defaults
+## Defaults
 
-## npm dependencies
+### npm dependencies
+
 * serve                     : Local webserver for static website
 * onchange                  : Trigger builds when files change
 * sass                      : compile sass to css in build
@@ -22,14 +23,15 @@ A starting point for a website project
 * handlebars-webpack-plugin : Plugin to interpret hb
 * css-loader, style-loader  : Used in webpack config to pull in CSS styling in js modules (eg openlayers)
 
-## files
+### files
+
 * .eslintrc.js              : eslint configuration settings
 * .gitignore                : a basic set of file paths I don't want in git repo
 * .serve.json               : basic configuration for static file server
 * webpack.config.js         : build configurtion for Handlebars templates, SASS, JS
 * package.json              : node config
 
-# TODO
+## TODO
 
 * add a script to do all the above instructions for you
 * Basic CI for publishing to cloudflare pages
