@@ -5,10 +5,12 @@ A starting point for a website project
 ## Instructions
 
 * Clone project into new directory
-* In package.json : Edit Name / description
-* Edit config.json with site details
-* Change server port, if you want
 * npm i
+* In package.json:
+  * Edit Name / description
+  * Change server port, if you want
+* Edit config.json with site details
+* Create a favicon
 
 ## Defaults
 
