@@ -1,3 +1,5 @@
+'use strict'
+
 const path = require('path')
   , HandlebarsPlugin = require('handlebars-webpack-plugin')
   , config = require('./config.json')
@@ -46,7 +48,6 @@ module.exports = {
         } catch (e) {}
 
         const filenameNoExt = path.parse(path.basename(filename, '.hbs')).name
-        console.log(`filename is ${filenameNoExt}`)
         return {
           pagename : {
             name : filenameNoExt,
