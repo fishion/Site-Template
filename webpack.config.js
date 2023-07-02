@@ -15,7 +15,7 @@ module.exports = {
   },
   output : {
     filename : '[name].js',
-    path : path.join(__dirname, 'dist', 'js')
+    path : path.join(__dirname, config.paths.outputBuildPath, 'js')
   },
   module : {
     rules : [
@@ -28,7 +28,7 @@ module.exports = {
   plugins : [
     new HandlebarsPlugin({
       entry : path.join(__dirname, 'src', 'view', 'page', '**', '*.hbs'),
-      output : path.join(__dirname, 'dist', '[path]', '[name]'),
+      output : path.join(__dirname, config.paths.outputBuildPath, '[path]', '[name]'),
       data : config,
       // globbed path to partials, where folder/filename is unique
       partials : [

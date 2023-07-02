@@ -3,7 +3,8 @@
     "controllerPath"  : "src/controller",
     "pagesPath"       : "src/view/page",
     "wrappersPath"    : "src/view/component/wrapper",
-    "includesPath"    : "src/view/component/include"
+    "includesPath"    : "src/view/component/include",
+    "outputBuildPath" : "dist"
   },
   "site" : {
     "title"       : "Site Template",
