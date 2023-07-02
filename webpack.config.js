@@ -8,6 +8,7 @@ const appRoot = path.resolve(__dirname)
   , hbx = require('HandlebarsExtended')({ appRoot, ...config.paths })
 
 module.exports = {
+  // mode: 'development', devtool: false,
   mode : 'production',
   entry : {
     site : './src/js/site.js'
@@ -26,8 +27,8 @@ module.exports = {
   },
   plugins : [
     new HandlebarsPlugin({
-      entry : path.join(__dirname, 'src', 'view', 'page', '*.hbs'),
-      output : path.join(__dirname, 'dist', '[name]'),
+      entry : path.join(__dirname, 'src', 'view', 'page', '**', '*.hbs'),
+      output : path.join(__dirname, 'dist', '[path]', '[name]'),
       data : config,
       // globbed path to partials, where folder/filename is unique
       partials : [
@@ -36,7 +37,8 @@ module.exports = {
       // register custom helpers
       helpers : {
         wrap : hbx.helpers.wrap,
-        include : hbx.helpers.include
+        include : hbx.helpers.include,
+        math : hbx.helpers.math
       },
       onBeforeRender : (hb, data, filename) => {
         let controllereData = {}
