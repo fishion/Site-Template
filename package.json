@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js",
-    "lintfix": "eslint . --ext .js --fix",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' 'config.json' 'webpack.config.js' -- npm run build",
     "build": "webpack; sass src/sass:dist/css",
     "serve": "serve -p 4100 -c ../.serve.json dist"
