@@ -31,7 +31,7 @@ module.exports = {
       data : config,
       // globbed path to partials, where folder/filename is unique
       partials : [
-        path.join(process.cwd(), 'app', 'src', 'components', '*', '*.hbs')
+        path.join(appRoot, 'src', 'view', 'component', '*', '*.hbs')
       ],
       // register custom helpers
       helpers : {
