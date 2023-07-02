@@ -37,3 +37,5 @@ A starting point for a website project
 
 * add a script to do all the above instructions for you
 * Basic CI for publishing to cloudflare pages
+* Lint .json
+* Test partials path in webpack
