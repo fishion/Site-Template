@@ -1,11 +1,12 @@
 'use strict'
 
-const path = require('path')
-  , HandlebarsPlugin = require('handlebars-webpack-plugin')
-  , config = require('./config.json')
+import path = require('path')
+import HandlebarsPlugin = require('handlebars-webpack-plugin')
+import config = require('./config.json')
+import HBX = require('HandlebarsExtended')
 
 const appRoot = path.resolve(__dirname)
-  , hbx = require('HandlebarsExtended')({ appRoot, ...config.paths })
+  , hbx = HBX({ appRoot, ...config.paths })
 
 module.exports = {
   // mode: 'development', devtool: false,
@@ -45,19 +46,19 @@ module.exports = {
         include : hbx.helpers.include,
         math : hbx.helpers.math
       },
-      onBeforeRender : (hb: any, data: object, filename: string) => {
+      onBeforeRender : (hb: object, data: object, filename: string) => {
         const controllerName: string = filename
           .replace(/(\..*)?\.hbs$/, '') // strip .hbs or .ext.hbs extension
           .replace(config.paths.pagesPath, config.paths.controllerPath) // change to controller path
         let controllereData = {};
-        ['js','ts'].forEach(extension => {
+        ['js', 'ts'].forEach(extension => {
           try {
             controllereData = {
               ...controllereData,
               ...require(`${controllerName}.${extension}`)
             }
           } catch (e) {}
-        });
+        })
 
         const filenameNoExt = path.parse(path.basename(filename, '.hbs')).name
         return {

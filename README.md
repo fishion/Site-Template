@@ -27,6 +27,7 @@ A starting point for a website project
 * css-loader, style-loader  : Used in webpack config to pull in CSS styling in js modules (eg openlayers)
 * typescript, ts-loader     : Allow typescript compiling in webpack
 * ts-node                   : Allows webpack config itself to be .ts
+* typescript-eslint, @typescript-eslint/eslint-plugin, @typescript-eslint/parser : eslint for typescript
 
 ### files
 

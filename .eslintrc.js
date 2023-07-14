@@ -18,5 +18,21 @@ module.exports = {
     'space-before-function-paren' : ['error', 'never'],
     'key-spacing' : ['error', { beforeColon : true }],
     'brace-style' : ['error', '1tbs', { allowSingleLine : true }]
-  }
+  },
+  overrides : [
+    {
+      files : ['**/*.ts', '**/*.tsx'],
+      parser : '@typescript-eslint/parser',
+      plugins : [
+        '@typescript-eslint'
+      ],
+      extends : [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended'
+      ],
+      parserOptions : {
+        project : ['./tsconfig.json']
+      }
+    }
+  ]
 }
