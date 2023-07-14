@@ -11,7 +11,7 @@ module.exports = {
   // mode: 'development', devtool: false,
   mode : 'production',
   entry : {
-    site : './src/js/site.js'
+    site : './src/js/site.ts'
   },
   output : {
     filename : '[name].js',
@@ -19,6 +19,11 @@ module.exports = {
   },
   module : {
     rules : [
+      {
+        test : /\.tsx?$/,
+        use : 'ts-loader',
+        exclude : /node_modules/
+      },
       {
         test : /\.css$/,
         use : ['style-loader', 'css-loader']
@@ -40,14 +45,19 @@ module.exports = {
         include : hbx.helpers.include,
         math : hbx.helpers.math
       },
-      onBeforeRender : (hb, data, filename) => {
-        let controllereData = {}
-        try {
-          const controllerName = filename
-            .replace(/(\..*)?\.hbs$/, '') // strip .hbs or .ext.hbs extension
-            .replace(config.paths.pagesPath, config.paths.controllerPath) // change to controller path
-          controllereData = require(controllerName)
-        } catch (e) {}
+      onBeforeRender : (hb: any, data: object, filename: string) => {
+        const controllerName: string = filename
+          .replace(/(\..*)?\.hbs$/, '') // strip .hbs or .ext.hbs extension
+          .replace(config.paths.pagesPath, config.paths.controllerPath) // change to controller path
+        let controllereData = {};
+        ['js','ts'].forEach(extension => {
+          try {
+            controllereData = {
+              ...controllereData,
+              ...require(`${controllerName}.${extension}`)
+            }
+          } catch (e) {}
+        });
 
         const filenameNoExt = path.parse(path.basename(filename, '.hbs')).name
         return {

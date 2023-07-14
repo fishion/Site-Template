@@ -23,7 +23,10 @@ A starting point for a website project
 * eslint-config-standard    : used as baseline in .eslintrc.js
 * webpack, webpack-cli      : site builder
 * handlebars-webpack-plugin : Plugin to interpret hb
+* handlebarsextended        : Add wrapper and include (+other helpers) to handlebars
 * css-loader, style-loader  : Used in webpack config to pull in CSS styling in js modules (eg openlayers)
+* typescript, ts-loader     : Allow typescript compiling in webpack
+* ts-node                   : Allows webpack config itself to be .ts
 
 ### files
 

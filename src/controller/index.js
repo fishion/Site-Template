@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  controllerVar : 'Controller Var'
+  controllerJsVar : 'Controller JS Var'
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
-    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.scss' 'src/**/*.json' 'config.json' 'webpack.config.js' -- npm run build",
+    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'config.json' 'webpack.config.*s' -- npm run build",
     "build": "webpack; sass src/sass:dist/css --style compressed",
     "serve": "serve -p 4100 -c ../.serve.json dist"
   },
@@ -22,6 +22,9 @@
     "sass": "^1.55.0",
     "serve": "^14.0.1",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
