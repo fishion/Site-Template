@@ -59,6 +59,10 @@ h1, h2 {
 p {
   font-size: 2.7rem;
   margin-bottom: 3rem;
+  em {
+    background: green;
+    color: white;
+  }
 }
 a {
   color: var(--text-primary);

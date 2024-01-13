@@ -1,10 +1,10 @@
 {{#wrap "html"}}
   <p>Site Template</p>
-  <p>Site title : {{{site.title}}}</p>
-  <p>Page name : {{pagename.name}}</p>
-  <p>Page is index : {{#if pagename.is.index}}true{{/if}}</p>
-  <p>Controller JS variable : {{{controllerJsVar}}}</p>
-  <p>Controller TS variable : {{{controllerTsVar}}}</p>
-  <p>Scripted JS output : <span id="jsoutput"></span></p>
-  <p>Scripted TS output : <span id="tsoutput"></span></p>
+  <p>Site title : <em>{{{site.title}}}</em></p>
+  <p>Page name : <em>{{pagename.name}}</em></p>
+  <p>Page is index : <em>{{#if pagename.is.index}}true{{/if}}</em></p>
+  <p>Controller JS variable : <em>{{{controllerJsVar}}}</em></p>
+  <p>Controller TS variable : <em>{{{controllerTsVar}}}</em></p>
+  <p>Scripted JS output : <em id="jsoutput"></em></>
+  <p>Scripted TS output : <em id="tsoutput"></em></p>
 {{/wrap}}
