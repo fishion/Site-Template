@@ -1,11 +1,11 @@
 'use strict'
 
-import path = require('path')
-import HandlebarsPlugin = require('handlebars-webpack-plugin')
-import config = require('./config.json')
-import HBX = require('HandlebarsExtended')
+import * as path from 'path'
+import * as config from './config.json'
+import HandlebarsPlugin from 'handlebars-webpack-plugin'
+import HBX from 'HandlebarsExtended'
 
-const appRoot = path.resolve(__dirname)
+const appRoot: string = path.resolve(__dirname)
   , hbx = HBX({ appRoot, ...config.paths })
 
 module.exports = {
