@@ -1,3 +1,4 @@
-const output: string = 'js loaded'
+const output: string = 'ts loaded'
+  , domEl: HTMLElement | null = document.getElementById('tsoutput')
 
-console.log(output)
+domEl && (domEl.innerHTML = output)

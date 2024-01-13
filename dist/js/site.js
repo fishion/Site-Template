@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("js loaded")})();
+(()=>{const e=document.getElementById("jsoutput");e&&(e.innerHTML="js loaded")})();

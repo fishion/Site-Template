@@ -12,11 +12,15 @@ module.exports = {
   // mode: 'development', devtool: false,
   mode : 'production',
   entry : {
-    site : './src/js/site.ts'
+    site : './src/js/site.js',
+    sitets : './src/js/site.ts'
   },
   output : {
     filename : '[name].js',
     path : path.join(__dirname, config.paths.outputBuildPath, 'js')
+  },
+  resolve : {
+    extensions : ['.ts', '.js']
   },
   module : {
     rules : [
