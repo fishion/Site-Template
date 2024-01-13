@@ -12,8 +12,8 @@ module.exports = {
   // mode: 'development', devtool: false,
   mode : 'production',
   entry : {
-    site : './src/js/site.js',
-    sitets : './src/js/site.ts'
+    site : './src/site-scripts/site.js',
+    sitets : './src/site-scripts/site.ts'
   },
   output : {
     filename : '[name].js',
