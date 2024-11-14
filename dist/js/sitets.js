@@ -1,1 +1,0 @@
-(()=>{"use strict";var t=document.getElementById("tsoutput");t&&(t.innerHTML="ts loaded")})();
