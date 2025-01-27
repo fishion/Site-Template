@@ -2,6 +2,10 @@
 
 A starting point for a website project
 
+## Style guide
+
+<https://google.github.io/styleguide/tsguide.html>
+
 ## Converting to typescript
 
 <https://dev.to/tqbit/a-step-by-step-guide-to-migrate-a-nodejs-web-app-to-typescript-5hi2>
@@ -15,6 +19,13 @@ A starting point for a website project
   * Change server port, if you want
 * Edit config.json with site details
 * Create a favicon
+* Deploy static site ot e.g. cloudflare pages, building to 'dist' folder as part of deployment
+
+### Serving site
+
+* use dnsmasq configuration to serve everything on any-site-name.dev.maytreehousestudios.co.uk from localhost.
+  * `/opt/homebrew/etc/dnsmasq.conf` should countain the following line : `address=/dev.maytreehousestudios.co.uk/127.0.0.1`
+* Connect on http for now
 
 ## Defaults
 
