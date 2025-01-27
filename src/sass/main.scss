@@ -10,15 +10,6 @@ $breakpoint-full: 1280px;  /* small desktop <-> full desktop */
 $breakpoint-large: 2074px;  /* full desktop <-> large desktop */
 
 :root {
-  // text sizes
-  --base-font-size: 8px;
-  @media (max-width: $breakpoint-small) {
-    --base-font-size: 7px;
-  }
-  @media (max-width: $breakpoint-tablet) {
-    --base-font-size: 6px;
-  }
-
   // fonts
   --base-fonts : 'Raleway', sans-serif;
 
@@ -28,6 +19,15 @@ $breakpoint-large: 2074px;  /* full desktop <-> large desktop */
 
   // colour aliases
   --text-primary: var(--dark-grey);
+
+  // text sizes
+  --base-font-size: 8px;
+  @media (max-width: $breakpoint-small) {
+    --base-font-size: 7px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    --base-font-size: 6px;
+  }
 }
 
 /*****************************************************

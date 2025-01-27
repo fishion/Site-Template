@@ -1,4 +1,4 @@
 const output: string = 'ts loaded'
-  , domEl: HTMLElement | null = document.getElementById('tsoutput')
+const domEl: HTMLElement | null = document.getElementById('tsoutput')
 
-domEl && (domEl.innerHTML = output)
+if (domEl) domEl.innerHTML = output
