@@ -1,14 +1,16 @@
-'use strict'
-
-import * as path from 'path'
-import * as config from './config.json'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import config from './config.json' with {type : 'json'}
 import HandlebarsPlugin from 'handlebars-webpack-plugin'
-import HBX from 'HandlebarsExtended'
+import CopyPlugin from 'copy-webpack-plugin'
+import HBX from 'handlebarsextended'
 
-const appRoot: string = path.resolve(__dirname)
-  , hbx = HBX({ appRoot, ...config.paths })
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+const appRoot = path.resolve(__dirname)
+const hbx = HBX({ appRoot, ...config.paths })
 
-module.exports = {
+export default {
   // mode: 'development', devtool: false,
   mode : 'production',
   entry : {
@@ -36,6 +38,17 @@ module.exports = {
     ]
   },
   plugins : [
+    new CopyPlugin({
+      patterns : [
+        {
+          from : path.join(__dirname, 'src', 'img'),
+          to : path.join(__dirname, config.paths.outputBuildPath, 'img')
+        }
+      ],
+      options : {
+        concurrency : 100
+      }
+    }),
     new HandlebarsPlugin({
       entry : path.join(__dirname, 'src', 'view', 'page', '**', '*.hbs'),
       output : path.join(__dirname, config.paths.outputBuildPath, '[path]', '[name]'),
@@ -48,20 +61,23 @@ module.exports = {
       helpers : {
         wrap : hbx.helpers.wrap,
         include : hbx.helpers.include,
-        math : hbx.helpers.math
+        math : hbx.helpers.math,
+        json : hbx.helpers.json
       },
-      onBeforeRender : (hb: object, data: object, filename: string) => {
-        const controllerName: string = filename
+      onBeforeRender : (_, data, filename) => {
+        const controllerName = filename
           .replace(/(\..*)?\.hbs$/, '') // strip .hbs or .ext.hbs extension
           .replace(config.paths.pagesPath, config.paths.controllerPath) // change to controller path
-        let controllereData = {};
+        let controllerData = {};
         ['js', 'ts'].forEach(extension => {
           try {
-            controllereData = {
-              ...controllereData,
+            controllerData = {
+              ...controllerData,
               ...require(`${controllerName}.${extension}`)
             }
-          } catch (e) {}
+          } catch (_) {
+            // no action
+          }
         })
 
         const filenameNoExt = path.parse(path.basename(filename, '.hbs')).name
@@ -71,7 +87,7 @@ module.exports = {
             is : { [filenameNoExt] : true }
           },
           ...data,
-          ...controllereData
+          ...controllerData
         }
       }
     })
