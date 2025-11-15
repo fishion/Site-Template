@@ -3,23 +3,25 @@
 import jslint from "@eslint/js"
 import tslint from "typescript-eslint"
 import globals from "globals"
+import prettier from "eslint-config-prettier"
 
 export default [
   jslint.configs.recommended,
   ...tslint.configs.recommended,
+  prettier,
   {
-    files : ["**/*.js", '**/*.ts'],
-    languageOptions : {
-      ecmaVersion : "latest",
-      sourceType : "module",
-      globals : {
+    files: ["**/*.js", "**/*.ts"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
         ...globals.browser,
         ...globals.node,
       },
     },
   },
   {
-    ignores : [
+    ignores: [
       "node_modules",
       "**/node_modules", // should be ignored by default anyway
       "dist/**/*",
@@ -28,20 +30,17 @@ export default [
     ],
   },
   {
-    rules : {
-      "one-var" : ["warn", "never"],
-      "no-multi-spaces" : "warn",
-      "comma-dangle" : ["error", "always-multiline"],
-      "space-before-function-paren" : ["error", "never"],
-      "brace-style" : ["error", "1tbs", {
-        allowSingleLine : true,
-      }],
-      "@typescript-eslint/consistent-indexed-object-style" : "error",
-      "@typescript-eslint/no-unused-vars" : [ "error", {
-        "argsIgnorePattern" : "^_",
-        "varsIgnorePattern" : "^_",
-        "caughtErrorsIgnorePattern" : "^_",
-      }],
+    rules: {
+      "one-var": ["warn", "never"],
+      "@typescript-eslint/consistent-indexed-object-style": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
     },
   },
 ]

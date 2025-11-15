@@ -9,6 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.js' -- npm run build",
     "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
     "serve": "serve -p 4100 -c ../.serve.json dist"
@@ -22,7 +24,9 @@
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "eslint": "^9.19.0",
+    "eslint-config-prettier": "^9.1.0",
     "globals": "^15.15.0",
+    "prettier": "^3.4.2",
     "handlebars-webpack-plugin": "^2.2.1",
     "handlebarsextended": "github:fishion/HandlebarsExtended",
     "onchange": "^7.1.0",

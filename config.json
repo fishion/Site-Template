@@ -1,18 +1,18 @@
 {
-  "paths" : {
-    "controllerPath"  : "src/controller",
-    "pagesPath"       : "src/view/page",
-    "wrappersPath"    : "src/view/component/wrapper",
-    "includesPath"    : "src/view/component/include",
-    "outputBuildPath" : "dist"
+  "paths": {
+    "controllerPath": "src/controller",
+    "pagesPath": "src/view/page",
+    "wrappersPath": "src/view/component/wrapper",
+    "includesPath": "src/view/component/include",
+    "outputBuildPath": "dist"
   },
-  "site" : {
-    "title"       : "Site Template",
-    "description" : "A template structure for generating static sites",
-    "author"      : "Maytree House Studios",
-    "url"         : "www.maytreehousestudios.co.uk/",
-    "themeColour" : "rgb(33,82,179)",
-    "twitterHandle" : "",
-    "og-description" : ""
+  "site": {
+    "title": "Site Template",
+    "description": "A template structure for generating static sites",
+    "author": "Maytree House Studios",
+    "url": "www.maytreehousestudios.co.uk/",
+    "themeColour": "rgb(33,82,179)",
+    "twitterHandle": "",
+    "og-description": ""
   }
 }

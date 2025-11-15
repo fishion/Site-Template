@@ -6,16 +6,16 @@
 */
 $breakpoint-tablet: 768px; /* phone <-> tablet */
 $breakpoint-small: 1024px; /* tablet <-> small desktop */
-$breakpoint-full: 1280px;  /* small desktop <-> full desktop */
-$breakpoint-large: 2074px;  /* full desktop <-> large desktop */
+$breakpoint-full: 1280px; /* small desktop <-> full desktop */
+$breakpoint-large: 2074px; /* full desktop <-> large desktop */
 
 :root {
   // fonts
-  --base-fonts : 'Raleway', sans-serif;
+  --base-fonts: "Raleway", sans-serif;
 
   // pallette
-  --light-grey : rgb(220,220,220);
-  --dark-grey : rgb(100,100,100);
+  --light-grey: rgb(220, 220, 220);
+  --dark-grey: rgb(100, 100, 100);
 
   // colour aliases
   --text-primary: var(--dark-grey);
@@ -34,14 +34,30 @@ $breakpoint-large: 2074px;  /* full desktop <-> large desktop */
 * General Styles
 *****************************************************/
 
-html, body, div, header, footer, nav, main, section, article, p, h1, h2, h3, h4, h5, h6 {
+html,
+body,
+div,
+header,
+footer,
+nav,
+main,
+section,
+article,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   vertical-align: top;
 }
-html, body {
+html,
+body {
   font-family: var(--base-fonts);
   font-size: var(--base-font-size);
   font-weight: var(--weight-normal);
@@ -52,7 +68,8 @@ body {
   background: var(--light-grey);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 3.2rem;
   font-weight: 500;
 }
@@ -79,9 +96,11 @@ ul {
 * Element Styles
 *****************************************************/
 
-header, main, footer {
+header,
+main,
+footer {
   margin: 5rem;
-  border: 1px solid var(--dark-grey)
+  border: 1px solid var(--dark-grey);
 }
 nav {
   margin: 1rem 5rem;
