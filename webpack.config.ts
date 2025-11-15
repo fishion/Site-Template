@@ -1,9 +1,12 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { createRequire } from 'module'
 import config from './config.json' with {type : 'json'}
 import HandlebarsPlugin from 'handlebars-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import HBX from 'handlebarsextended'
+
+const require = createRequire(import.meta.url)
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -28,7 +31,15 @@ export default {
     rules : [
       {
         test : /\.tsx?$/,
-        use : 'ts-loader',
+        use : {
+          loader : 'ts-loader',
+          options : {
+            compilerOptions : {
+              module : 'ESNext',
+              moduleResolution : 'bundler'
+            }
+          }
+        },
         exclude : /node_modules/
       },
       {

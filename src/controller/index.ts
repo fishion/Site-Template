@@ -1,8 +1,5 @@
-'use strict'
-{
-  const output: string = 'Controller TS Var'
+const output: string = 'Controller TS Var'
 
-  module.exports = {
-    controllerTsVar : output
-  }
+export default {
+  controllerTsVar : output
 }
