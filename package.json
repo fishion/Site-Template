@@ -9,8 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
-    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.*s' -- npm run build",
-    "build": "node --import tsx ./node_modules/.bin/webpack --config webpack.config.ts && sass src/sass:dist/css --style compressed",
+    "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.js' -- npm run build",
+    "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
     "serve": "serve -p 4100 -c ../.serve.json dist"
   },
   "devDependencies": {
@@ -30,8 +30,6 @@
     "serve": "^14.0.1",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.4",
-    "ts-node": "^10.9.1",
-    "tsx": "^4.20.6",
     "typescript": "^5.1.6",
     "typescript-eslint": "^8.21.0",
     "webpack": "^5.74.0",
