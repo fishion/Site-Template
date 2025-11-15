@@ -18,14 +18,14 @@ export default {
   mode : 'production',
   entry : {
     site : './src/site-scripts/site.js',
-    sitets : './src/site-scripts/site.ts'
+    sitets : './src/site-scripts/site.ts',
   },
   output : {
     filename : '[name].js',
-    path : path.join(__dirname, config.paths.outputBuildPath, 'js')
+    path : path.join(__dirname, config.paths.outputBuildPath, 'js'),
   },
   resolve : {
-    extensions : ['.ts', '.js']
+    extensions : ['.ts', '.js'],
   },
   module : {
     rules : [
@@ -36,29 +36,29 @@ export default {
           options : {
             compilerOptions : {
               module : 'ESNext',
-              moduleResolution : 'bundler'
-            }
-          }
+              moduleResolution : 'bundler',
+            },
+          },
         },
-        exclude : /node_modules/
+        exclude : /node_modules/,
       },
       {
         test : /\.css$/,
-        use : ['style-loader', 'css-loader']
-      }
-    ]
+        use : ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins : [
     new CopyPlugin({
       patterns : [
         {
           from : path.join(__dirname, 'src', 'img'),
-          to : path.join(__dirname, config.paths.outputBuildPath, 'img')
-        }
+          to : path.join(__dirname, config.paths.outputBuildPath, 'img'),
+        },
       ],
       options : {
-        concurrency : 100
-      }
+        concurrency : 100,
+      },
     }),
     new HandlebarsPlugin({
       entry : path.join(__dirname, 'src', 'view', 'page', '**', '*.hbs'),
@@ -66,14 +66,14 @@ export default {
       data : config,
       // globbed path to partials, where folder/filename is unique
       partials : [
-        path.join(appRoot, 'src', 'view', 'component', '*', '*.hbs')
+        path.join(appRoot, 'src', 'view', 'component', '*', '*.hbs'),
       ],
       // register custom helpers
       helpers : {
         wrap : hbx.helpers.wrap,
         include : hbx.helpers.include,
         math : hbx.helpers.math,
-        json : hbx.helpers.json
+        json : hbx.helpers.json,
       },
       onBeforeRender : (_, data, filename) => {
         const controllerName = filename
@@ -84,7 +84,7 @@ export default {
           try {
             controllerData = {
               ...controllerData,
-              ...require(`${controllerName}.${extension}`)
+              ...require(`${controllerName}.${extension}`),
             }
           } catch (_) {
             // no action
@@ -95,12 +95,12 @@ export default {
         return {
           pagename : {
             name : filenameNoExt,
-            is : { [filenameNoExt] : true }
+            is : { [filenameNoExt] : true },
           },
           ...data,
-          ...controllerData
+          ...controllerData,
         }
-      }
-    })
-  ]
+      },
+    }),
+  ],
 }

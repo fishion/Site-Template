@@ -14,9 +14,9 @@ export default [
       sourceType : "module",
       globals : {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
       },
-    }
+    },
   },
   {
     ignores : [
@@ -24,23 +24,15 @@ export default [
       "**/node_modules", // should be ignored by default anyway
       "dist/**/*",
       //"**/*.js", // ignore compiled js files
-      "!eslint.config.js" // but not this file
-    ]
+      "!eslint.config.js", // but not this file
+    ],
   },
   {
     rules : {
       "one-var" : ["warn", "never"],
       "no-multi-spaces" : "warn",
-      "comma-style" : ["error", "first", {
-        exceptions : {
-          ArrayExpression : true,
-          ObjectExpression : true,
-        },
-      }],
+      "comma-dangle" : ["error", "always-multiline"],
       "space-before-function-paren" : ["error", "never"],
-      "key-spacing" : ["error", {
-        beforeColon : true,
-      }],
       "brace-style" : ["error", "1tbs", {
         allowSingleLine : true,
       }],
@@ -48,8 +40,8 @@ export default [
       "@typescript-eslint/no-unused-vars" : [ "error", {
         "argsIgnorePattern" : "^_",
         "varsIgnorePattern" : "^_",
-        "caughtErrorsIgnorePattern" : "^_"
-      }]
-    }
-  }
+        "caughtErrorsIgnorePattern" : "^_",
+      }],
+    },
+  },
 ]

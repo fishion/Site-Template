@@ -1,5 +1,5 @@
 'use strict'
 
 export default {
-  controllerJsVar : 'Controller JS Var'
+  controllerJsVar : 'Controller JS Var',
 }
