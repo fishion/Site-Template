@@ -1,3 +1,5 @@
+// Note - convention is to leave eslint as js even in ts project
+
 import jslint from "@eslint/js"
 import tslint from "typescript-eslint"
 import globals from "globals"

@@ -50,7 +50,7 @@ A starting point for a website project
 * .eslintrc.js              : eslint configuration settings
 * .gitignore                : a basic set of file paths I don't want in git repo
 * .serve.json               : basic configuration for static file server
-* webpack.config.js         : build configurtion for Handlebars templates, SASS, JS
+* webpack.config.ts         : build configurtion for Handlebars templates, SASS, TS, JS
 * package.json              : node config
 
 ## TODO
