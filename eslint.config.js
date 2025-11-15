@@ -7,14 +7,11 @@ export default [
   ...tslint.configs.recommended,
   {
     files : ["**/*.js", '**/*.ts'],
-    "env" : {
-      "browser" : true,
-      "node" : true
-    },
     languageOptions : {
       ecmaVersion : "latest",
       sourceType : "module",
       globals : {
+        ...globals.browser,
         ...globals.node
       },
     }
