@@ -1,7 +1,5 @@
 # TODO
 
-- update README file to describe modules now in use
-
 - deal with warnings in compile
 
 - push out to all prjects

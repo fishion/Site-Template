@@ -31,27 +31,66 @@ A starting point for a website project
 
 ### npm dependencies
 
+**Build & bundling:**
+
+- webpack, webpack-cli : Site builder for bundling JS/TS modules
+- copy-webpack-plugin : Copy static assets during webpack build
+
+**Template engine:**
+
+- handlebars-webpack-plugin : Plugin to interpret Handlebars templates
+- @types/handlebars-webpack-plugin : TypeScript types for handlebars-webpack-plugin
+- handlebarsextended : Add wrapper and include (+other helpers) to Handlebars
+
+**Styling:**
+
+- sass : Compile SASS to CSS in build
+- css-loader, style-loader : Used in webpack config to pull in CSS styling in JS modules (eg openlayers)
+
+**TypeScript:**
+
+- typescript : TypeScript compiler
+- ts-loader : Webpack loader for TypeScript
+- tsx : Execute TypeScript files directly (allows webpack config to be .ts)
+- @types/node, @types/glob : TypeScript type definitions
+
+**Linting & formatting:**
+
+- eslint, @eslint/js : Lint your code using config in eslint.config.js
+- typescript-eslint, @typescript-eslint/eslint-plugin, @typescript-eslint/parser : ESLint for TypeScript
+- eslint-config-prettier : Disable ESLint rules that conflict with Prettier
+- prettier : Code formatter
+- globals : Global variable definitions for ESLint
+
+**Development tools:**
+
 - serve : Local webserver for static website
 - onchange : Trigger builds when files change
-- sass : compile sass to css in build
-- eslint : lint your code ising config in .eslintrc.js
-- eslint-config-standard : used as baseline in .eslintrc.js
-- webpack, webpack-cli : site builder
-- handlebars-webpack-plugin : Plugin to interpret hb
-- @types/handlebars-webpack-plugin : ts types for handlebars-webpack-plugin
-- handlebarsextended : Add wrapper and include (+other helpers) to handlebars
-- css-loader, style-loader : Used in webpack config to pull in CSS styling in js modules (eg openlayers)
-- typescript, ts-loader : Allow typescript compiling in webpack
-- ts-node : Allows webpack config itself to be .ts
-- typescript-eslint, @typescript-eslint/eslint-plugin, @typescript-eslint/parser : eslint for typescript
+- husky : Git hooks for running pre-commit checks
 
 ### files
 
-- .eslintrc.js : eslint configuration settings
-- .gitignore : a basic set of file paths I don't want in git repo
-- .serve.json : basic configuration for static file server
-- webpack.config.ts : build configurtion for Handlebars templates, SASS, TS, JS
-- package.json : node config
+**Core configuration:**
+
+- package.json : Node.js project configuration, dependencies, and npm scripts
+- config.json : Site-specific settings (paths, metadata, theme colors) used by webpack build
+
+**Build configuration:**
+
+- tsconfig.json : TypeScript compiler configuration and project settings
+- webpack.config.js : Build configuration for bundling Handlebars templates, SASS, TS, and JS
+
+**Code quality:**
+
+- eslint.config.js : ESLint linting rules and configuration
+- .prettierrc : Prettier code formatting rules (semicolons, trailing commas, etc.)
+- .prettierignore : Files and directories to exclude from Prettier formatting
+- .husky/ : Git hooks directory (pre-commit checks for linting and formatting)
+
+**Development:**
+
+- .serve.json : Configuration for the local static file server
+- .gitignore : Files and directories to exclude from git repository
 
 ## suggested dependencies
 
