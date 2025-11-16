@@ -44,6 +44,7 @@ export default {
   entry: {
     site: "./src/site-scripts/site.js",
     sitets: "./src/site-scripts/site.ts",
+    map: "./src/site-scripts/map.ts",
   },
   output: {
     filename: "[name].js",
@@ -51,6 +52,11 @@ export default {
   },
   resolve: {
     extensions: [".ts", ".js"],
+  },
+  performance: {
+    hints: "warning",
+    maxEntrypointSize: 512000, // 500 KiB - increased for map bundle with OpenLayers
+    maxAssetSize: 512000,
   },
   module: {
     rules: [

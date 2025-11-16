@@ -35,6 +35,8 @@ A starting point for a website project
 
 - webpack, webpack-cli : Site builder for bundling JS/TS modules
 - copy-webpack-plugin : Copy static assets during webpack build
+- css-loader : Webpack loader for processing CSS files
+- style-loader : Webpack loader for injecting CSS into the DOM
 
 **Template engine:**
 
@@ -44,6 +46,10 @@ A starting point for a website project
 **Styling:**
 
 - sass : Compile SASS to CSS in build
+
+**Maps & visualization:**
+
+- ol : OpenLayers library for interactive maps
 
 **TypeScript:**
 
