@@ -1,7 +1,5 @@
 # TODO
 
-- Upgrade all dependencies
-
 - Add in a map into test page, which will require css-loader, style-loader : Used in webpack config to pull in CSS styling in JS modules (eg openlayers)
 
 - push out to all projects

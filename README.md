@@ -113,7 +113,6 @@ dependencies : {
 },
 "devDependencies": {
 "chai": "^4.2.0",
-"eslint": "^5.16.0",
 "mocha": "^5.2.0",
 "nodemon": "^1.18.6",
 "nyc": "^13.1.0",
