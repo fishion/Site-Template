@@ -11,5 +11,4 @@
 - Test partials path in webpack
 - No testing framework (Jest, Vitest, etc.)
 
-
 - Mixed .js + .ts Controllers - Your webpack config searches for both index.ts and index.js and merges them. This is unusual - typically you'd standardize on one or the other.
