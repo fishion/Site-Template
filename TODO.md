@@ -1,8 +1,10 @@
 # TODO
 
-- deal with warnings in compile
+- Upgrade all dependencies
 
-- push out to all prjects
+- Add in a map into test page, which will require css-loader, style-loader : Used in webpack config to pull in CSS styling in JS modules (eg openlayers)
+
+- push out to all projects
 
 - Develop AI md files to guide the AI and set up desired behaviour
 

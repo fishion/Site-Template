@@ -39,20 +39,18 @@ A starting point for a website project
 **Template engine:**
 
 - handlebars-webpack-plugin : Plugin to interpret Handlebars templates
-- @types/handlebars-webpack-plugin : TypeScript types for handlebars-webpack-plugin
 - handlebarsextended : Add wrapper and include (+other helpers) to Handlebars
 
 **Styling:**
 
 - sass : Compile SASS to CSS in build
-- css-loader, style-loader : Used in webpack config to pull in CSS styling in JS modules (eg openlayers)
 
 **TypeScript:**
 
 - typescript : TypeScript compiler
 - ts-loader : Webpack loader for TypeScript
 - tsx : Execute TypeScript files directly (allows webpack config to be .ts)
-- @types/node, @types/glob : TypeScript type definitions
+- @types/node : TypeScript type definitions for Node.js
 
 **Linting & formatting:**
 
