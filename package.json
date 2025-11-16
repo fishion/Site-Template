@@ -31,6 +31,7 @@
     "handlebars-webpack-plugin": "^2.2.1",
     "handlebarsextended": "github:fishion/HandlebarsExtended",
     "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "onchange": "^7.1.0",
     "prettier": "^3.4.2",
     "sass": "^1.55.0",

@@ -61,6 +61,7 @@ A starting point for a website project
 - eslint-config-prettier : Disable ESLint rules that conflict with Prettier
 - prettier : Code formatter
 - globals : Global variable definitions for ESLint
+- lint-staged : Run linters on staged files only during pre-commit
 
 **Development tools:**
 
@@ -85,6 +86,7 @@ A starting point for a website project
 - eslint.config.js : ESLint linting rules and configuration
 - .prettierrc : Prettier code formatting rules (semicolons, trailing commas, etc.)
 - .prettierignore : Files and directories to exclude from Prettier formatting
+- .lintstagedrc.json : Lint-staged configuration for pre-commit linting/formatting
 - .husky/ : Git hooks directory (pre-commit checks for linting and formatting)
 
 **Development:**
