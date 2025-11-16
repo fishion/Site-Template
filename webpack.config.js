@@ -1,6 +1,6 @@
 import path from "path"
 import { fileURLToPath } from "url"
-import { glob } from 'node:fs/promises'
+import { glob } from "node:fs/promises"
 import config from "./config.json" with { type: "json" }
 import HandlebarsPlugin from "handlebars-webpack-plugin"
 import CopyPlugin from "copy-webpack-plugin"
@@ -56,15 +56,7 @@ export default {
     rules: [
       {
         test: /\.tsx?$/,
-        use: {
-          loader: "ts-loader",
-          options: {
-            compilerOptions: {
-              module: "ESNext",
-              moduleResolution: "bundler",
-            },
-          },
-        },
+        use: { loader: "ts-loader" },
         exclude: /node_modules/,
       },
       {
@@ -110,7 +102,7 @@ export default {
             is: { [filenameNoExt]: true },
           },
           ...data,
-          ...controllerCache.get(controllerPath) || {}, // Look up preloaded controller data from cache
+          ...(controllerCache.get(controllerPath) || {}), // Look up preloaded controller data from cache
         }
       },
     }),
