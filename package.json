@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "onchange": "onchange 'src/**/*.hbs' 'src/**/*.js' 'src/**/*.ts' 'src/**/*.scss' 'src/**/*.json' 'src/**/*.svg' 'config.json' 'webpack.config.js' -- npm run build",
     "build": "webpack --config webpack.config.js && sass src/sass:dist/css --style compressed",
-    "serve": "serve -p 4100 -c ../.serve.json dist"
+    "serve": "serve -p 4100 -c ../.serve.json dist",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
@@ -29,6 +30,7 @@
     "globals": "^15.15.0",
     "handlebars-webpack-plugin": "^2.2.1",
     "handlebarsextended": "github:fishion/HandlebarsExtended",
+    "husky": "^9.1.7",
     "onchange": "^7.1.0",
     "prettier": "^3.4.2",
     "sass": "^1.55.0",

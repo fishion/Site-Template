@@ -1,9 +1,7 @@
 # TODO
 
-- Module Resolution Mismatch - Your tsconfig.json uses NodeNext but webpack.config.ts overrides it to bundler for ts-loader. This works but could be confusing.
-  - consider https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html
+- update README file to describe modules now in use
 
-- Make prettier & lint required for commit
 - deal with warnings in compile
 
 - push out to all prjects
