@@ -1,7 +1,8 @@
 # TODO
 
-- push out to all projects
-
+- incorporate rand templat var for cache invalidation?
+- look at warnings when running npm i from scratch
+- How am I making sure I have type safety using tsx over ts-node
 - Develop AI md files to guide the AI and set up desired behaviour
 
 - add a script to follwo instructions in README and set up a new project from this template

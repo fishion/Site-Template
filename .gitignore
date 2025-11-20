@@ -1,6 +1,33 @@
-.DS_Store
-node_modules
-dist
+# TypeScript build output
+dist/
+
+# Node modules
+node_modules/
+
+# IaC artefacts
 tf/.terraform
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Test coverage
+coverage/
+
+# wip
 design/*
-.vscode
